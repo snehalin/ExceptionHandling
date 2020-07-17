@@ -3,15 +3,17 @@ import java.io.FileNotFoundException;
 
 public class ThrowsDemo {
 
-	static void method1() throws FileNotFoundException, ClassNotFoundException
+	static void method1() throws FileNotFoundException, ClassNotFoundException 
 	{
-		FileInputStream fin=new FileInputStream("D:\\Hefshine\\MarchBatchPrograms\\ArrayPrograms\\src\\Min.java"); 
+		int a=10/0;
+		FileInputStream fin=new FileInputStream("D:\\Hefshine\\MarchBatchPrograms\\ArrayPrograms\\src\\SSort.java"); 
 	   throw new ClassNotFoundException();
 	}
 	
 	
-	public static void main(String[] args) {
-		try {
+	public static void main(String[] args) throws FileNotFoundException, ClassNotFoundException  {
+		try
+		{
 		method1();
 		}
 		catch(Exception e)
