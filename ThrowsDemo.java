@@ -1,50 +1,26 @@
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 
+//throws->> multiple exceptions at time throw towards calling method or jvm
+//mainly designed to throw checked Exceptions 
+
+ /*
+  void m1() throws Exception1,Exception2....
+  {
+  }
+  */
 public class ThrowsDemo {
 
-	static void method1() throws FileNotFoundException, ClassNotFoundException 
+	static void m1() throws FileNotFoundException,ClassNotFoundException//,ArithmeticException
 	{
-		int a=10/0;
-		FileInputStream fin=new FileInputStream("D:\\Hefshine\\MarchBatchPrograms\\ArrayPrograms\\src\\SSort.java"); 
-	   throw new ClassNotFoundException();
+	//	int a=10/0;
+	FileReader fr=new FileReader("d:/abc.txt");
+	 throw new ClassNotFoundException();	
 	}
 	
-	
-	public static void main(String[] args) throws FileNotFoundException, ClassNotFoundException  {
-		try
-		{
-		method1();
-		}
-		catch(Exception e)
-		{
-			System.out.println(e);
-		}
-		System.out.println("hello");
-		/*
-		 void m1() throws Exception1,Exception2.....
-		 {
-		 
-		 }
-		 
-		 throw                     throws
-	1.single exception    1.Multiple Exception can be throws.	 
-		 
-	2.syntax	 
-	3.Mainly Used to throw   3.Mainly used to throw checked exception
-	 User defined Exception	 
-
-
-throws exception towards
-	jvm or method or  catch block	 
-		 
-		 
-		 
-		 
-		 */
+	public static void main(String[] args) throws FileNotFoundException, ClassNotFoundException {
 		
-		
+		m1();
 	}
-		
-		
+
 }

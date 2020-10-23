@@ -1,17 +1,10 @@
+//checked Userdefined Exception--Exception
+//Unchecked Userdefined Exception--RuntimeException
+public class InvalidAgeException extends RuntimeException{
 
-public class InvalidAgeException extends Exception //Exception-checked   RuntimeException-Unchecked
-{
-	
-	InvalidAgeException()
-	{
-		super("You are small");
-		
-		
-	}
-	public InvalidAgeException(String str)
+	InvalidAgeException(String str)
 	{
 		super(str);
-		
 	}
+	
 }
-//throw Throwable Instance
