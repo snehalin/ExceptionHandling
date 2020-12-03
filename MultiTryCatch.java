@@ -1,25 +1,23 @@
-import java.util.Scanner;
+import java.sql.SQLException;
 
 public class MultiTryCatch {
 
 	public static void main(String[] args) {
-		
-		int a[]= {1,2,3,4};
-		int b=0,c=0;
-		System.out.println("start");
-		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter index");
-		int index=sc.nextInt();
-		System.out.println("Enter value for b");
-		b=sc.nextInt();
-		try {
-		c=a[index]/b;
+		try
+		{
+			int arr[]= {1,2,3,4};
+			int b=arr[6]/0;
+			
 		}
-		catch(ArithmeticException e)
+		catch(StringIndexOutOfBoundsException e)
 		{
 			System.out.println(e);
 		}
-		catch(NumberFormatException e)//
+		catch(NumberFormatException e)
+		{
+			System.out.println(e);
+		}
+		catch(NullPointerException e)
 		{
 			System.out.println(e);
 		}
@@ -28,10 +26,7 @@ public class MultiTryCatch {
 			System.out.println(e);
 		}
 		
-		System.out.println("End");
-		
-		
-		
+		System.out.println("hi");
 	}
 
 }
